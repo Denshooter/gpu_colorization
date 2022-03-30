@@ -13,6 +13,7 @@ In total, 10 FPS can be archived on this embedded GPU.
 
 - TensorFlow 2
 - OpenCV 3.3.1
+- CSI camera plugged it (see code of `live_recolor[_plot].py`)
 
 ## Model
 
@@ -47,6 +48,7 @@ python3 Training.py
 ### Live colorization
 
 The launch of `live_recolor_plot.py` opens a window as shown in the GIF at the start of this README.
+Note that, the CSI camera must be plugged in.
 
 ```bash
 python3 live_recolor.py
