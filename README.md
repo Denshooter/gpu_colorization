@@ -52,3 +52,18 @@ python3 live_recolor_plot.py
 ```
 
 ### Pretrainied Model
+
+The model was runned for 13 epochs and its weights are stored in `./saved_models`.
+Note that, the grey images must have a shape of `(256,256,1)`.
+The following code will load the model and colorized an image:
+
+```python3
+autoencoder = Autoencoder()
+autoencoder.build((1, 256, 256, 1)) # need a batch size
+autoencoder.load_weights("./saved_models/trainied_weights_epoch_12")
+autoencoder.summary()
+
+grey_img = ... # grey_img.shape = (256,256,1)
+grey_img = np.expand_dims(grey_img, axis=0) # add batch dim
+colorized_img = autoencoder(grey_img)
+```
