@@ -1,9 +1,10 @@
 # Colorization of Grey Images by applying a Convolutional Autoencoder on the Jetson Nano
 ## by Dennis Konkol and Tim Niklas Witte
 
-This repository contains an pretrainied convolutional autoencoder for colorization of grey images.
+This repository contains an pretrainied  convolutional autoencoder for colorization of grey images.
 The live camera stream will be colorizatized in real time.
 The architecture of the ANN is optimized to run on the Jetson Nano.
+It has 300.000 parameters.
 In total, 10 FPS can be archived on this embedded GPU.
 
 ![Example Video](videoPresentation.gif)
@@ -30,10 +31,6 @@ Trainable params: 297,210
 Non-trainable params: 1,092
 _______________________________________________________________
 ```
-
-![Example Video](./Plots/Layers/EncoderLayer.png)
-
-![Example Video](./Plots/Layers/DecoderLayer.png)
 
 ## Usage
 
