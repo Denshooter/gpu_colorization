@@ -7,14 +7,14 @@ from Decoder import *
 class Autoencoder(tf.keras.Model):
     def __init__(self):
         super(Autoencoder, self).__init__()
-
         self.encoder = Encoder()
         self.decoder = Decoder()
 
+        self.optimizer = tf.keras.optimizers.Adam(learning_rate=0.0001)
+
         self.loss_function = tf.keras.losses.MeanSquaredError()
 
-        self.optimizer = tf.keras.optimizers.Adam(learning_rate=0.01)
-
+        self.metric_mean = tf.keras.metrics.Mean(name="loss")
 
     @tf.function
     def call(self, x, training=False):
@@ -31,16 +31,24 @@ class Autoencoder(tf.keras.Model):
 
         gradients = tape.gradient(loss, self.trainable_variables)
         self.optimizer.apply_gradients(zip(gradients, self.trainable_variables))
-        return loss
+
+        self.metric_mean.update_state(loss)
+
+        
 
     def test(self, test_data):
+
+        self.metric_mean.reset_states()
+
         # test over complete test data
-        test_loss_aggregator = []
-        for input, target in test_data: # ignore label            
+        for input, target in test_data:           
             prediction = self(input)
             
-            sample_test_loss = self.loss_function(target, prediction)
-            test_loss_aggregator.append(sample_test_loss.numpy())
+            loss = self.loss_function(target, prediction)
+            self.metric_mean.update_state(loss)
 
-        test_loss = tf.reduce_mean(test_loss_aggregator)
-        return test_loss
+        mean_loss = self.metric_mean.result()
+        self.metric_mean.reset_states()
+        return mean_loss
+
+    
