@@ -13,6 +13,28 @@ In total, 10 FPS can be archived on this embedded GPU.
 - TensorFlow 2
 - OpenCV 3.3.1
 
+## Model
+
+```bash
+ Model: "autoencoder"
+_______________________________________________________________
+ Layer (type)                Output Shape            Param #   
+===============================================================
+ encoder (Encoder)           multiple                148155    
+                                                               
+ decoder (Decoder)           multiple                150145    
+                                                                 
+===============================================================
+Total params: 298,302
+Trainable params: 297,210
+Non-trainable params: 1,092
+_______________________________________________________________
+```
+
+![Example Video](./Plots/Layers/EncoderLayer.png)
+
+![Example Video](./Plots/Layers/DecoderLayer.png)
+
 ## Usage
 
 ### Training
