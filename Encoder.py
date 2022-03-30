@@ -42,4 +42,3 @@ class Encoder(tf.keras.Model): # <-- Needed to make parameters trainable and to 
         #print("-------------")
         #exit()
         return x
-    
