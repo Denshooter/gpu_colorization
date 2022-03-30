@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2021/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Main.aux
+The style file: ieeetr.bst
+Database file #1: Literatur.bib
+Warning--empty journal in colorize
+You've used 11 entries,
+            1876 wiz_defined-function locations,
+            524 strings with 5025 characters,
+and the built_in function-call counts, 1546 in all, are:
+= -- 140
+> -- 51
+< -- 0
++ -- 23
+- -- 12
+* -- 70
+:= -- 200
+add.period$ -- 18
+call.type$ -- 11
+change.case$ -- 11
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 62
+empty$ -- 211
+format.name$ -- 12
+if$ -- 405
+int.to.chr$ -- 0
+int.to.str$ -- 11
+missing$ -- 2
+newline$ -- 43
+num.names$ -- 4
+pop$ -- 83
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 39
+stack$ -- 0
+substring$ -- 12
+swap$ -- 5
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 6
+width$ -- 13
+write$ -- 88
+(There was 1 warning)

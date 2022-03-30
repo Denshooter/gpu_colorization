@@ -1,0 +1,53 @@
+\begin{thebibliography}{10}
+
+\bibitem{jetsonNano}
+``{Jetson Nano Developer Kit}.''
+  https://developer.nvidia.com/embedded/jetson-nano-developer-kit.
+\newblock Accessed: 2022-03-24.
+
+\bibitem{nvidia3070ti}
+``{GeForce RTX 3070 Familiy - Specs}.''
+  https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3070-3070ti/.
+\newblock Accessed: 2022-03-24.
+
+\bibitem{ConvolutionAnimation}
+``{Animation of a Convolution}.''
+  https://spinkk.github.io/singlekernel\_nopadding.html.
+\newblock Accessed: 2022-03-24.
+
+\bibitem{autoencoderImg}
+``{Schematic structure of an autoencoder with 3 fully connected hidden layers.
+  The code (z, or h for reference in the text) is the most internal layer.}.''
+  https://en.wikipedia.org/wiki/Autoencoder\#/media/File:Autoencoder\_structure.png.
+\newblock Accessed: 2022-03-24.
+
+\bibitem{jetsonNanoTensorFlow}
+``{Official TensorFlow for Jetson Nano!}.''
+  https://forums.developer.nvidia.com/t/official-tensorflow-for-jetson-nano/71770.
+\newblock Accessed: 2022-03-24.
+
+\bibitem{opencv}
+``{OpenCV - releases}.'' https://opencv.org/releases/.
+\newblock Accessed: 2022-03-24.
+
+\bibitem{residualConnectionImg}
+``{Figure of a residual connection}.'' https://i.stack.imgur.com/d9HNk.png.
+\newblock Accessed: 2022-03-24.
+
+\bibitem{vanishingGradients}
+H.~H. Tan and K.~H. Lim, ``Vanishing gradient mitigation with deep learning
+  neural network optimization,'' in {\em 2019 7th International Conference on
+  Smart Computing Communications (ICSCC)}, pp.~1--4, 2019.
+
+\bibitem{resnet}
+K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
+  recognition,'' 2015.
+
+\bibitem{overparameterization}
+Z.~Allen-Zhu, Y.~Li, and Y.~Liang, ``Learning and generalization in
+  overparameterized neural networks, going beyond two layers,'' 2018.
+
+\bibitem{colorize}
+R.~Zhang, P.~Isola, and A.~A. Efros, ``Colorful image colorization,'' 2016.
+
+\end{thebibliography}
