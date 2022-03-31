@@ -33,13 +33,23 @@ Non-trainable params: 1,092
 _______________________________________________________________
 ```
 
+### Hyperparameters
+
+```bash
+optimizer = Adam
+learning rate = 0.0001
+loss function = mean squared error
+batch size = 32
+```
+
 ## Usage
 
 ### Training
 
-Run `Training.py` to start the training of the model.
+Run `Training.py` to start the training of the model on the `imagenet2012` dataset.
 Each epoch the weights are stored into `./saved_models`.
 Besides, in `./test_logs` are the corresponding trainings statistics (train and test loss and also a batch of colorized test images) logged.
+Note that, the `imagenet2012` dataset is stored in `./imagenet` as described in this [blog article](https://towardsdatascience.com/preparing-the-imagenet-dataset-with-tensorflow-c681916014ee)
 
 ```bash
 python3 Training.py
@@ -74,8 +84,8 @@ python3 live_recolor_plot.py
 
 ### Pretrainied Model
 
-The model was runned for 13 epochs and its weights are stored in `./saved_models`.
-Note that, the grey images must have a shape of `(256,256,1)`.
+The model was runned for 13 epochs on the `imagnet2012` dataset and its weights are stored in `./saved_models`.
+Note that, grey images must have a shape of `(256,256,1)`.
 The following code will load the model and colorized an image:
 
 ```python3
