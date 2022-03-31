@@ -9,6 +9,10 @@ In total, 10 FPS can be archived on this embedded GPU.
 
 ![Example Video](videoPresentation.gif)
 
+In entire documentation of this project in form of a paper can be find in 
+`./Paper/Main.pdf`.
+This project was created as a part of the GPU programming course of Mario Porrmann in the winter term 2021/22 of the Osnabrück University.
+
 ## Requirements
 
 - TensorFlow 2
@@ -35,7 +39,7 @@ _______________________________________________________________
 
 ### Hyperparameters
 
-```bash
+```python3
 optimizer = Adam
 learning rate = 0.0001
 loss function = mean squared error
@@ -49,7 +53,7 @@ batch size = 32
 Run `Training.py` to start the training of the model on the `imagenet2012` dataset.
 Each epoch the weights are stored into `./saved_models`.
 Besides, in `./test_logs` are the corresponding trainings statistics (train and test loss and also a batch of colorized test images) logged.
-Note that, the `imagenet2012` dataset is stored in `./imagenet` as described in this [blog article](https://towardsdatascience.com/preparing-the-imagenet-dataset-with-tensorflow-c681916014ee)
+Note that, the `imagenet2012` dataset is stored in `./imagenet` as described in this [blog article](https://towardsdatascience.com/preparing-the-imagenet-dataset-with-tensorflow-c681916014ee).
 
 ```bash
 python3 Training.py
