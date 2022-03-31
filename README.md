@@ -92,6 +92,9 @@ python3 live_recolor_plot.py
 ### Pretrained Model
 
 The model was runned for 13 epochs on the `imagnet2012` dataset and its weights are stored in `./saved_models`.
+
+![Train and test loss](./Plots/TrainTestLossPlot.png)
+
 Note that, grey images must have a shape of `(256,256,1)`.
 The following code will load the pretrained model and colorized an image:
 
@@ -105,5 +108,5 @@ grey_img = ... # grey_img.shape = (256,256,1)
 grey_img = np.expand_dims(grey_img, axis=0) # add batch dim
 ab_img = autoencoder(grey_img) # get ab values
 
-rbg_img = getRGB(grey_img, ab_img) # contained in Main.py
+rbg_img = getRGB(grey_img, ab_img) # contained in Training.py
 ```
