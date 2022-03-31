@@ -1,7 +1,8 @@
 # Colorization of Grey Images by applying a Convolutional Autoencoder on the Jetson Nano
 ## by Dennis Konkol and Tim Niklas Witte
 
-This repository contains an pretrainied  convolutional autoencoder for colorization of grey images.
+This repository contains an pretrained convolutional autoencoder on the `imagenet2012` dataset 
+for colorization of grey images.
 The live camera stream will be colorizatized in real time.
 The architecture of the ANN is optimized to run on the Jetson Nano.
 It has 300.000 parameters.
@@ -9,17 +10,16 @@ In total, 10 FPS can be archived on this embedded GPU.
 
 ![Example Video](videoPresentation.gif)
 
-In entire documentation of this project in form of a paper is
-`./Paper_GPU_colorization.pdf`.
-All corresponding files including `.tex` file and figures are stored in `./Paper`.
+The `./Paper_GPU_colorization.pdf` file represents the entire documentation of this project in form of a paper.
+All corresponding files including the `.tex` file and figures are stored in `./Paper`.
 
-This project was created as a part of the GPU programming course of Mario Porrmann in the winter term 2021/22 of the Osnabrück University.
+This project was created as a part of the GPU programming course of Mario Porrmann in the winter term 2021/22 at the Osnabrück University.
 
 ## Requirements
 
 - TensorFlow 2
 - OpenCV 3.3.1
-- CSI camera plugged it (see code of `live_recolor[_plot].py`)
+- CSI camera must be plugged in (see code of `live_recolor[_plot].py`)
 
 ## Model
 
@@ -55,7 +55,8 @@ batch size = 32
 Run `Training.py` to start the training of the model on the `imagenet2012` dataset.
 Each epoch the weights are stored into `./saved_models`.
 Besides, in `./test_logs` are the corresponding trainings statistics (train and test loss and also a batch of colorized test images) logged.
-Note that, the `imagenet2012` dataset is stored in `./imagenet` as described in this [blog article](https://towardsdatascience.com/preparing-the-imagenet-dataset-with-tensorflow-c681916014ee).
+Note that, the `imagenet2012` dataset must be stored in `./imagenet` as described in this [blog article](https://towardsdatascience.com/preparing-the-imagenet-dataset-with-tensorflow-c681916014ee).
+This includes a change of the variable `data_dir` at line 36.
 
 ```bash
 python3 Training.py
@@ -73,14 +74,14 @@ python3 live_recolor.py
 It has the following structure:
 
 ```bash
-(1) | (2) | (3) | (4)
+(1) | (2) | (3)
 
 (1) = live RGB camera image
 (2) = live grey camera image
 (3) = live colorized image
 ```
 
-To get also displayed a loss plot (mean squared error between `(1)` and `(3)`),
+In order to get additionally displayed a loss plot (mean squared error between `(1)` and `(3)`),
 run `live_recolor_plot.py` instead.
 The loss plot is presented right from `(3)`.
 
@@ -88,11 +89,11 @@ The loss plot is presented right from `(3)`.
 python3 live_recolor_plot.py
 ```
 
-### Pretrainied Model
+### Pretrained Model
 
 The model was runned for 13 epochs on the `imagnet2012` dataset and its weights are stored in `./saved_models`.
 Note that, grey images must have a shape of `(256,256,1)`.
-The following code will load the model and colorized an image:
+The following code will load the pretrained model and colorized an image:
 
 ```python3
 autoencoder = Autoencoder()
@@ -102,5 +103,7 @@ autoencoder.summary()
 
 grey_img = ... # grey_img.shape = (256,256,1)
 grey_img = np.expand_dims(grey_img, axis=0) # add batch dim
-colorized_img = autoencoder(grey_img)
+ab_img = autoencoder(grey_img) # get ab values
+
+rbg_img = getRGB(grey_img, ab_img) # contained in Main.py
 ```

@@ -33,7 +33,7 @@ def main():
     labels_path = tf.keras.utils.get_file('ImageNetLabels.txt','https://storage.googleapis.com/download.tensorflow.org/data/ImageNetLabels.txt')
     imagenet_labels = np.array(open(labels_path).read().splitlines())
 
-    data_dir = '/home/timwitte/Downloads/'
+    data_dir = '/home/timwitte/Downloads/' # <---- change me!!!!
     write_dir = './imagenet'
 
     # Construct a tf.data.Dataset
