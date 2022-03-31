@@ -9,8 +9,10 @@ In total, 10 FPS can be archived on this embedded GPU.
 
 ![Example Video](videoPresentation.gif)
 
-In entire documentation of this project in form of a paper can be find in 
-`./Paper/Main.pdf`.
+In entire documentation of this project in form of a paper is
+`./Paper_GPU_colorization.pdf`.
+All corresponding files including `.tex` file and figures are stored in `./Paper`.
+
 This project was created as a part of the GPU programming course of Mario Porrmann in the winter term 2021/22 of the Osnabrück University.
 
 ## Requirements
