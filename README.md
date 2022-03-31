@@ -55,8 +55,8 @@ batch size = 32
 Run `Training.py` to start the training of the model on the `imagenet2012` dataset.
 Each epoch the weights are stored into `./saved_models`.
 Besides, in `./test_logs` are the corresponding trainings statistics (train and test loss and also a batch of colorized test images) logged.
-Note that, the `imagenet2012` dataset must be stored in `./imagenet` as described in this [blog article](https://towardsdatascience.com/preparing-the-imagenet-dataset-with-tensorflow-c681916014ee).
-This includes a change of the variable `data_dir` at line 36.
+Note that, the `imagenet2012` dataset must be stored in `./imagenet` as described in this [blog article](https://medium.com/analytics-vidhya/how-to-train-a-neural-network-classifier-on-imagenet-using-tensorflow-2-ede0ea3a35ff).
+This includes a change of the variable `data_dir` at line 38.
 
 ```bash
 python3 Training.py
