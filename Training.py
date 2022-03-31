@@ -29,6 +29,8 @@ def getRGB(L, AB, batch_mode=True):
 
 def main():
     
+    # Code for loading the ImageNet2012 dataset taken from: 
+    # https://medium.com/analytics-vidhya/how-to-train-a-neural-network-classifier-on-imagenet-using-tensorflow-2-ede0ea3a35ff
 
     labels_path = tf.keras.utils.get_file('ImageNetLabels.txt','https://storage.googleapis.com/download.tensorflow.org/data/ImageNetLabels.txt')
     imagenet_labels = np.array(open(labels_path).read().splitlines())
